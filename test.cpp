@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "C:\Users\chian\source\repos\QueueTaskCode\QueueFunction.cpp"
-
+// The path of header file should be updated to directory where you store your clone file locally. 
 
 // Test Case 1: Test if a new queue is empty
 TEST(QueueTest, NewQueueIsInit) {
@@ -65,7 +65,7 @@ TEST(QueueTest, FullQueue) {
     // Try to enqueue one more element, should fail because the queue is full
     Queue_enqueue(&q, 110);
 
-    // Check that the size of the queue is still 5, and front and rear are correct
+    // Check that the size of the queue is still 10, and front and rear are correct
     EXPECT_EQ(q.rear, 9);  // Rear should be at the last element
     EXPECT_EQ(q.front, 0); // Front should still be 0
 }
